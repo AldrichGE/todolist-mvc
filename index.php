@@ -1,0 +1,8 @@
+<?php
+
+session_start();
+
+require_once 'app/core/Router.php';
+
+$router = new Router();
+$router->route();
