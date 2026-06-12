@@ -2,47 +2,34 @@
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
 
     <title>Editar Tarefa</title>
 
     <link rel="stylesheet"
         href="/todolist-mvc/assets/css/style.css">
-
 </head>
 
 <body>
-
 <div class="container">
-
     <div class="page-header">
-
         <h1>Editar Tarefa</h1>
-
     </div>
 
     <div class="card">
-
         <form method="POST">
-
             <div class="form-group">
-
                 <label>Título</label>
-
                 <input
                     type="text"
                     name="title"
                     class="input"
                     value="<?= htmlspecialchars($task['title']) ?>"
                     required>
-
             </div>
 
             <div class="form-grid">
-
                 <div class="form-group">
-
                     <label>Categoria</label>
 
                     <select
@@ -73,15 +60,11 @@
                             <?= $task['category'] === 'Pessoal' ? 'selected' : '' ?>>
                             Pessoal
                         </option>
-
                     </select>
-
                 </div>
 
                 <div class="form-group">
-
                     <label>Prioridade</label>
-
                     <select
                         name="priority"
                         class="input">
@@ -100,9 +83,7 @@
                             <?= $task['priority'] === 'Alta' ? 'selected' : '' ?>>
                             Alta
                         </option>
-
                     </select>
-
                 </div>
 
                 <div class="form-group">
@@ -114,9 +95,7 @@
                         name="due_date"
                         class="input"
                         value="<?= $task['due_date'] ?>">
-
                 </div>
-
             </div>
 
             <div class="form-group">
@@ -140,15 +119,9 @@
                     class="btn">
                     Cancelar
                 </a>
-                
             </div>
-
         </form>
-
     </div>
-
 </div>
-
 </body>
-
 </html>

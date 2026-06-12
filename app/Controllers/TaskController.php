@@ -72,15 +72,10 @@ class TaskController
             $task->create(
 
                 $_POST['title'],
-
                 $_POST['description'],
-
                 $_POST['category'],
-
                 $_POST['priority'],
-
                 $_POST['due_date'],
-
                 $_SESSION['user_id']
 
             );
@@ -109,15 +104,10 @@ class TaskController
                 $id,
 
                 $_POST['title'],
-
                 $_POST['description'],
-
                 $_POST['category'],
-
                 $_POST['priority'],
-
                 $_POST['due_date'],
-
                 $_POST['status']
             );
 

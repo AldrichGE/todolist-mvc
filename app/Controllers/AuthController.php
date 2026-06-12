@@ -9,7 +9,6 @@ class AuthController
     public function showRegister()
     {
         $error = $this->register();
-
         require_once __DIR__ .
             '/../views/auth/register.php';
     }
@@ -19,11 +18,8 @@ class AuthController
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             $name = trim($_POST['name']);
-
             $email = trim($_POST['email']);
-
             $password = $_POST['password'];
-
             $user = ModelFactory::make('User');
 
             $existingUser =
@@ -59,7 +55,6 @@ class AuthController
     public function showLogin()
     {
         $error = $this->login();
-
         require_once __DIR__ .
             '/../views/auth/login.php';
     }
@@ -70,9 +65,7 @@ class AuthController
 
             $email = trim($_POST['email']);
             $password = $_POST['password'];
-
             $userModel = ModelFactory::make('User');
-
             $user = $userModel->findByEmail($email);
 
             if (
@@ -84,10 +77,10 @@ class AuthController
             ) {
 
                 $_SESSION['user_id'] = $user['id'];
-
                 $_SESSION['user_name'] = $user['name'];
-
+                
                 header('Location: ?page=dashboard');
+
                 exit;
             }
 

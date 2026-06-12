@@ -24,7 +24,6 @@ class Router
                     '/../controllers/AuthController.php';
 
                 $controller = new AuthController();
-
                 $controller->showLogin();
 
                 break;
@@ -34,9 +33,7 @@ class Router
                 require_once __DIR__ .
                     '/../controllers/TaskController.php';
 
-                $controller =
-                    new TaskController();
-
+                $controller = new TaskController();
                 $controller->dashboard();
 
                 break;
@@ -46,9 +43,7 @@ class Router
                 require_once __DIR__ .
                     '/../controllers/AuthController.php';
 
-                $controller =
-                    new AuthController();
-
+                $controller = new AuthController();
                 $controller->logout();
 
                 break;
@@ -58,9 +53,7 @@ class Router
                 require_once __DIR__ .
                     '/../controllers/TaskController.php';
 
-                $controller =
-                    new TaskController();
-
+                $controller = new TaskController();
                 $controller->create();
 
                 break;
@@ -70,9 +63,7 @@ class Router
                 require_once __DIR__ .
                     '/../controllers/TaskController.php';
 
-                $controller =
-                    new TaskController();
-
+                $controller = new TaskController();
                 $controller->edit();
 
                 break;
@@ -83,7 +74,6 @@ class Router
                     '/../controllers/TaskController.php';
 
                 $controller = new TaskController();
-
                 $controller->toggle();
 
                 break;
@@ -94,7 +84,6 @@ class Router
                     '/../controllers/TaskController.php';
 
                 $controller = new TaskController();
-
                 $controller->delete();
 
                 break;

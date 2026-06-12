@@ -107,25 +107,15 @@ class Task
             $params[':due_date'] = $dueDate;
         }
 
-        $sql .= "
-        ORDER BY
-
-CASE
-
-    WHEN status = 'Pendente'
-    THEN 0
-
-    ELSE 1
-    
-END,
-due_date ASC,
-        created_at DESC
-    ";
+        $sql .= "ORDER BY CASE WHEN status = 'Pendente'
+        THEN 0 
+        ELSE 1
+        END,
+        due_date ASC,
+        created_at DESC";
 
         $stmt = $this->conn->prepare($sql);
-
         $stmt->execute($params);
-
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
@@ -174,17 +164,11 @@ due_date ASC,
         return $stmt->execute([
 
             ':title' => $title,
-
             ':description' => $description,
-
             ':category' => $category,
-
             ':priority' => $priority,
-
             ':due_date' => $dueDate,
-
             ':status' => $status,
-
             ':id' => $id
         ]);
     }

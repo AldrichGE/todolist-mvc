@@ -25,66 +25,43 @@
 
             <?php if (!empty($_SESSION['success'])): ?>
 
-    <div class="alert-success">
+                <div class="alert-success">
+                    <?= $_SESSION['success']; ?>
+                </div>
 
-        <?= $_SESSION['success']; ?>
-
-    </div>
-
-    <?php unset($_SESSION['success']); ?>
-
-<?php endif; ?>
-
+                <?php unset($_SESSION['success']); ?>
+            <?php endif; ?>
             <?php if (!empty($error)): ?>
 
                 <div class="alert-error">
-
                     <?= $error ?>
-
                 </div>
-
-            <?php endif; ?>
+            
+        <?php endif; ?>
 
             <form method="POST">
-
                 <div class="form-group">
-
                     <label>Email</label>
-
                     <input class="input" type="email" name="email" required>
-
                 </div>
 
                 <div class="form-group">
-
                     <label>Senha</label>
-
                     <input class="input" type="password" name="password" required>
-
                 </div>
 
                 <button class="btn btn-primary" type="submit">
-
                     Entrar
-
                 </button>
-
             </form>
 
             <p class="auth-link">
-
                 Não possui conta?
-
                 <a href="?page=register">
                     Cadastre-se
                 </a>
-
             </p>
-
         </div>
-
     </div>
-
 </body>
-
 </html>

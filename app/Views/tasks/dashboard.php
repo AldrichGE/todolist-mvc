@@ -15,7 +15,7 @@
                 <h1 class="user-greeting">
                     Olá, <?= $_SESSION['user_name'] ?>
 
-                    <a href="?page=logout" class="icon-logout" title="Sair do sistema">
+                    <a href="?page=logout" class="icon-logout" title="Sair do sistema">                        
                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
@@ -41,7 +41,6 @@
         </div>
 
         <div class="stats-grid">
-
             <div class="stat-card">
 
                 <span class="stat-number">
@@ -75,9 +74,7 @@
                 <span class="stat-label">
                     Concluídas
                 </span>
-
             </div>
-
         </div>
 
         <div class="filters-card">
@@ -90,37 +87,28 @@
                     value="<?= htmlspecialchars($search ?? '') ?>">
 
                 <select name="category" class="input">
-
                     <option value="">Todas Categorias</option>
-
                     <option value="Acadêmica">Acadêmica</option>
                     <option value="Financeira">Financeira</option>
                     <option value="Trabalho">Trabalho</option>
                     <option value="Bem-Estar">Bem-Estar</option>
                     <option value="Pessoal">Pessoal</option>
-
                 </select>
 
                 <select name="priority" class="input">
 
                     <option value="">Todas Prioridades</option>
-
                     <option value="Baixa">Baixa</option>
                     <option value="Média">Média</option>
                     <option value="Alta">Alta</option>
-
                 </select>
 
                 <input type="date" name="due_date" class="input" value="<?= $dueDate ?? '' ?>">
 
                 <button class="btn btn-primary">
-
                     Filtrar
-
                 </button>
-
             </form>
-
         </div>
 
         <div class="tasks-grid">
@@ -169,13 +157,9 @@
 
                             <a href="?page=toggle-task&id=<?= $task['id'] ?>"
                                 class="task-check <?= $task['status'] === 'Concluída' ? 'checked' : '' ?>">
-
                                 ✓
-
                             </a>
-
                         </div>
-
                     </div>
 
                     <div class="task-content">
@@ -199,21 +183,15 @@
                             <span class="badge <?= $statusClass ?>">
                                 <?= htmlspecialchars($task['status']) ?>
                             </span>
-
                         </div>
-
                     </div>
 
                     <div class="task-footer">
-
                         <div class="task-date">
 
                             <?php if ($hasDueDate): ?>
-
                                 <?= date('d/m/Y', strtotime($task['due_date'])) ?>
-
                             <?php endif; ?>
-
                         </div>
 
                         <div class="task-actions">
@@ -227,9 +205,7 @@
 
                                     <path d="M12 20h9" />
                                     <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z" />
-
                                 </svg>
-
                             </a>
 
                             <a href="#" class="action-icon delete-icon" onclick="openDeleteModal(<?= $task['id'] ?>)">
@@ -243,17 +219,13 @@
                                     <path d="M10 11V17" />
                                     <path d="M14 11V17" />
                                     <path d="M9 6V4A1 1 0 0 1 10 3H14A1 1 0 0 1 15 4V6" />
-
                                 </svg>
-
                             </a>
-
                         </div>
                     </div>
                 </div>
             <?php endforeach; ?>
         </div>
-
     </div>
 
     <!-- Modais -->
@@ -304,5 +276,4 @@
     </script>
 
 </body>
-
 </html>
