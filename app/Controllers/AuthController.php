@@ -83,7 +83,7 @@ class AuthController
 
                 exit;
             }
-
+            
             $error = "Email ou senha inválidos.";
         }
 

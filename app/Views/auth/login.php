@@ -12,9 +12,7 @@
 <body>
 
     <div class="auth-container">
-
         <div class="card auth-card">
-
             <h1 class="auth-title">
                 Bem-vindo
             </h1>
